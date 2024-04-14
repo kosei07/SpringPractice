@@ -12,8 +12,8 @@
 
 	<div class="container-fluid">
 		<h1>ユーザー登録画面</h1>
-		<div class="alert d-flex align-items-center"
-			th:classappend="|${isError ? 'alert-danger' : 'alert-primary'}|" role="alert" th:if="${message != null}">
+		<div class="alert d-flex align-items-center" th:classappend="|${isError ? 'alert-danger' : 'alert-primary'}|"
+			role="alert" th:if="${message != null}">
 			<svg class="bi flex-shrink-0 me-2" width="24" height="24">
 				<use xlink:href="#exclamation-triangle-fill" th:if="${isError}" />
 				<use xlink:href="#info-fill" th:unless="${isError}" />
@@ -26,10 +26,12 @@
 					<p><label for="loginId">ログインID：</label>
 						<input type="text" class="form-control" th:field="*{loginId}">
 				</div>
+				<span class="text-danger" th;if="${#fields.hassErrors('loginId')}" th:errors="*{loginId}"></span>
 				<div class="col-3 col-md-2 col-xxl-1">
 					<p><label for="password">パスワード：</label>
 						<input type="password" class="form-control" th:field="*{password}">
 				</div>
+				<span class="text-danger" th;if="${#fields.hassErrors('password')}" th:errors="*{password}"></span>
 				<div class="col-3 col-md-2 col-xxl-1">
 					<p><button type="submit" class="btn btn-primary">登録</button>
 				</div>

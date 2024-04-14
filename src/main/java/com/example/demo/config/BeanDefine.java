@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.config;
 
 import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
@@ -13,7 +13,7 @@ public class BeanDefine {
 	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-	
+
 	@Bean
 	Mapper mapper() {
 		return new DozerBeanMapper();

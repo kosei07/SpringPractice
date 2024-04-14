@@ -2,16 +2,19 @@ package com.example.demo.controller;
 
 import org.springframework.context.MessageSource;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.WebAttributes;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.constant.MessageConst;
+import com.example.demo.constant.UniConst;
 import com.example.demo.form.LoginForm;
 import com.example.demo.service.LoginService;
 import com.example.demo.util.AppUtil;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -28,6 +31,9 @@ public class LoginController {
 
 	//* メッセージソース */
 	private final MessageSource messageSource;
+	private final HttpSession session;
+
+	// セッション情報
 
 	/**
 	 * 
@@ -36,13 +42,20 @@ public class LoginController {
 	 * @return　表示画面
 	 */
 
-	@GetMapping("login")
+	@GetMapping(UniConst.LOGIN)
 	public String view(Model model, LoginForm form) {
 
-		return "login";
+		return "/login";
 	}
 
-	@PostMapping("login")
+	@GetMapping(value = UniConst.LOGIN, params = "error")
+	public String viewWithError(Model model, LoginForm form) {
+		var errorInfo = (Exception) session.getAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
+		model.addAttribute("errorMsg", errorInfo.getMessage());
+		return "/login";
+	}
+
+	@PostMapping(UniConst.LOGIN)
 	public String login(Model model, LoginForm form) {
 		var userInfo = service.serchUserById(form.getLoginId());
 		var isCorrectUserAuth = userInfo.isPresent()

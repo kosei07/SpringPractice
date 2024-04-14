@@ -7,8 +7,11 @@ package com.example.demo.constant;
  * 
  */
 public class MessageConst {
-	// ログイン画面のs入力内容誤り
-	public static final String  LOGIN_WRONG_INPUT = "login.wrongInput";
-	public static final String  SIGNUP_EXISTED_LOGIN_ID = "signup.existedLoginId";
-	public static final String  SIGNUP_RESIST_SUCCEED = "signup.resistSucceed";
+	// 共通
+	public static final String FORM_ERROR = "common.formError";
+	// ログイン画面の入力内容誤り
+	public static final String LOGIN_WRONG_INPUT = "login.wrongInput";
+	// サインアップ
+	public static final String SIGNUP_EXISTED_LOGIN_ID = "signup.existedLoginId";
+	public static final String SIGNUP_RESIST_SUCCEED = "signup.resistSucceed";
 }

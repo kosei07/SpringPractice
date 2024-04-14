@@ -19,28 +19,28 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SignupService {
 	private final UserInfoRepository repository;
-	
+
 	// Dozer Mapper
 	private final Mapper mapper;
-	
+
 	// エンコーダー
 	private final PasswordEncoder passwordEncoder;
-	
+
 	/**
 	 * ユーザー情報テーブル　主キー検索
 	 * @param loginId
 	 * @return 登録情報: すでに同じloginIDが存在していればempty
 	 */
-	public Optional<UserInfo> resistUserInfo(SignupForm form){
+	public Optional<UserInfo> resistUserInfo(SignupForm form) {
 		var userInfoExistedOpt = repository.findById(form.getLoginId());
 		if (userInfoExistedOpt.isPresent()) {
 			return Optional.empty();
 		}
-		
+
 		var userInfo = mapper.map(form, UserInfo.class);
 		var encodedPassword = passwordEncoder.encode(form.getPassword());
 		userInfo.setPassword(encodedPassword);
-		
+
 		return Optional.of(repository.save(userInfo));
 	}
 }
