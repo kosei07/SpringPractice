@@ -37,7 +37,8 @@ public class WebSecurityConfig {
 				.formLogin(
 						login -> login.loginPage(UniConst.LOGIN)
 								.usernameParameter(USERNAME_PARAMETER)
-								.defaultSuccessUrl(UniConst.MENU));
+								.defaultSuccessUrl(UniConst.MENU))
+				.logout(logout -> logout.logoutSuccessUrl(UniConst.SIGNUP));
 
 		return http.build();
 	}
