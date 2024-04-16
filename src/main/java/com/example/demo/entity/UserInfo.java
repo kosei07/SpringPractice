@@ -40,7 +40,7 @@ public class UserInfo {
 	private boolean isDisabled;
 
 	// ユーザー権限
-	@Column
+	@Column(name = "authority_kind")
 	private String authority;
 
 	public UserInfo() {
