@@ -1,0 +1,245 @@
+2024-04-17T09:17:46.338+09:00  INFO 9992 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : Starting SpringPracticeApplication using Java 21.0.1 with PID 9992 (/Applications/Eclipse_2024-03.app/Contents/workspace/SpringPractice/target/classes started by inouekousei in /Applications/Eclipse_2024-03.app/Contents/workspace/SpringPractice)
+2024-04-17T09:17:46.339+09:00  INFO 9992 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-17T09:17:46.363+09:00  INFO 9992 --- [SpringPractice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-17T09:17:46.363+09:00  INFO 9992 --- [SpringPractice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-17T09:17:46.746+09:00  INFO 9992 --- [SpringPractice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-17T09:17:46.773+09:00  INFO 9992 --- [SpringPractice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interface.
+2024-04-17T09:17:46.966+09:00  WARN 9992 --- [SpringPractice] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+2024-04-17T09:17:46.971+09:00  INFO 9992 --- [SpringPractice] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-17T09:17:46.981+09:00 ERROR 9992 --- [SpringPractice] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:277) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:805) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.demo.SpringPracticeApplication.main(SpringPracticeApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.4.jar:3.2.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Pointcut is not well-formed: expecting 'name pattern' at character position 30
+execution(*com.exmple.demo..*(..))
+                              ^
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1130) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1105) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:511) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 17 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Pointcut is not well-formed: expecting 'name pattern' at character position 30
+execution(*com.exmple.demo..*(..))
+                              ^
+
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:334) ~[aspectjweaver-1.9.21.jar:na]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312) ~[aspectjweaver-1.9.21.jar:na]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:223) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:194) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:173) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:233) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:295) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:327) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:438) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1789) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 39 common frames omitted
+
+2024-04-17T09:41:41.981+09:00  INFO 10822 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : Starting SpringPracticeApplication using Java 21.0.1 with PID 10822 (/Applications/Eclipse_2024-03.app/Contents/workspace/SpringPractice/target/classes started by inouekousei in /Applications/Eclipse_2024-03.app/Contents/workspace/SpringPractice)
+2024-04-17T09:41:41.982+09:00  INFO 10822 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-17T09:41:42.005+09:00  INFO 10822 --- [SpringPractice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-17T09:41:42.005+09:00  INFO 10822 --- [SpringPractice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-17T09:41:42.389+09:00  INFO 10822 --- [SpringPractice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-17T09:41:42.417+09:00  INFO 10822 --- [SpringPractice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2024-04-17T09:41:42.610+09:00  WARN 10822 --- [SpringPractice] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+2024-04-17T09:41:42.615+09:00  INFO 10822 --- [SpringPractice] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-17T09:41:42.627+09:00 ERROR 10822 --- [SpringPractice] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:277) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:805) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.1.5.jar:6.1.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.4.jar:3.2.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.4.jar:3.2.4]
+	at com.example.demo.SpringPracticeApplication.main(SpringPracticeApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.4.jar:3.2.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Pointcut is not well-formed: expecting 'name pattern' at character position 30
+execution(*com.exmple.demo..*(..))
+                              ^
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1130) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1105) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:511) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 17 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Pointcut is not well-formed: expecting 'name pattern' at character position 30
+execution(*com.exmple.demo..*(..))
+                              ^
+
+	at org.aspectj.weaver.tools.PointcutParser.resolvePointcutExpression(PointcutParser.java:334) ~[aspectjweaver-1.9.21.jar:na]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:312) ~[aspectjweaver-1.9.21.jar:na]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:223) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:194) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:173) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:233) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:295) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:327) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:438) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1789) ~[spring-beans-6.1.5.jar:6.1.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.5.jar:6.1.5]
+	... 39 common frames omitted
+
+2024-04-17T09:42:19.183+09:00  INFO 10837 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : Starting SpringPracticeApplication using Java 21.0.1 with PID 10837 (/Applications/Eclipse_2024-03.app/Contents/workspace/SpringPractice/target/classes started by inouekousei in /Applications/Eclipse_2024-03.app/Contents/workspace/SpringPractice)
+2024-04-17T09:42:19.184+09:00  INFO 10837 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-17T09:42:19.209+09:00  INFO 10837 --- [SpringPractice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-17T09:42:19.209+09:00  INFO 10837 --- [SpringPractice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-17T09:42:19.564+09:00  INFO 10837 --- [SpringPractice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-17T09:42:19.590+09:00  INFO 10837 --- [SpringPractice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
+2024-04-17T09:42:19.901+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-17T09:42:19.908+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-17T09:42:19.908+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-17T09:42:19.930+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-17T09:42:19.931+09:00  INFO 10837 --- [SpringPractice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 722 ms
+2024-04-17T09:42:20.007+09:00  INFO 10837 --- [SpringPractice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-17T09:42:20.228+09:00  INFO 10837 --- [SpringPractice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41fb910
+2024-04-17T09:42:20.229+09:00  INFO 10837 --- [SpringPractice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-17T09:42:20.255+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-17T09:42:20.293+09:00  INFO 10837 --- [SpringPractice] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-17T09:42:20.314+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-17T09:42:20.446+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-17T09:42:20.493+09:00  WARN 10837 --- [SpringPractice] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.44 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-04-17T09:42:20.947+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-17T09:42:20.949+09:00  INFO 10837 --- [SpringPractice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-17T09:42:21.074+09:00  INFO 10837 --- [SpringPractice] [restartedMain] org.dozer.config.GlobalSettings          : Trying to find Dozer configuration file: dozer.properties
+2024-04-17T09:42:21.083+09:00  WARN 10837 --- [SpringPractice] [restartedMain] org.dozer.config.GlobalSettings          : Dozer configuration file not found: dozer.properties.  Using defaults for all Dozer global properties.
+2024-04-17T09:42:21.084+09:00  INFO 10837 --- [SpringPractice] [restartedMain] org.dozer.DozerInitializer               : Initializing Dozer. Version: 5.5.0, Thread Name: restartedMain
+2024-04-17T09:42:21.085+09:00  INFO 10837 --- [SpringPractice] [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerStatisticsController] auto registered with the Platform MBean Server
+2024-04-17T09:42:21.085+09:00  INFO 10837 --- [SpringPractice] [restartedMain] org.dozer.jmx.JMXPlatformImpl            : Dozer JMX MBean [org.dozer.jmx:type=DozerAdminController] auto registered with the Platform MBean Server
+2024-04-17T09:42:21.086+09:00  INFO 10837 --- [SpringPractice] [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2024-04-17T09:42:21.108+09:00  WARN 10837 --- [SpringPractice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-17T09:42:21.258+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6c2705e6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6116e6a, org.springframework.security.web.context.SecurityContextHolderFilter@249527d5, org.springframework.security.web.header.HeaderWriterFilter@22b5a072, org.springframework.web.filter.CorsFilter@762b2a24, org.springframework.security.web.csrf.CsrfFilter@599649b1, org.springframework.security.web.authentication.logout.LogoutFilter@2747c1aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@70daa32, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5281a92c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@250ab02, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c1821b5, org.springframework.security.web.access.ExceptionTranslationFilter@13953ba2, org.springframework.security.web.access.intercept.AuthorizationFilter@496c3182]
+2024-04-17T09:42:21.384+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-17T09:42:21.406+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-17T09:42:21.412+09:00  INFO 10837 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : Started SpringPracticeApplication in 2.407 seconds (process running for 2.931)
+2024-04-17T09:42:58.652+09:00  INFO 10837 --- [SpringPractice] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-17T09:42:58.653+09:00  INFO 10837 --- [SpringPractice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-17T09:42:58.656+09:00  INFO 10837 --- [SpringPractice] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-04-17T09:42:58.853+09:00  WARN 10837 --- [SpringPractice] [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][/login] Deprecated unwrapped fragment expression "common/sourceList :: sourceList" found in template /login, line 10, col 7. Please use the complete syntax of fragment expressions instead ("~{common/sourceList :: sourceList}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-04-17T09:42:58.901+09:00  WARN 10837 --- [SpringPractice] [http-nio-8080-exec-2] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-2][/login] Deprecated unwrapped fragment expression "common/messageIcon :: messageIcon" found in template /login, line 11, col 7. Please use the complete syntax of fragment expressions instead ("~{common/messageIcon :: messageIcon}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-04-17T09:43:06.506+09:00  WARN 10837 --- [SpringPractice] [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][menu] Deprecated unwrapped fragment expression "common/sourceList :: sourceList" found in template menu, line 10, col 7. Please use the complete syntax of fragment expressions instead ("~{common/sourceList :: sourceList}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-04-17T09:43:06.508+09:00  WARN 10837 --- [SpringPractice] [http-nio-8080-exec-8] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-8][menu] Deprecated unwrapped fragment expression "common/header :: header" found in template menu, line 11, col 7. Please use the complete syntax of fragment expressions instead ("~{common/header :: header}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-04-17T11:08:48.058+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h21m27s695ms).
+2024-04-17T12:01:09.078+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m21s22ms).
+2024-04-17T13:25:37.633+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h24m28s555ms).
+2024-04-17T14:47:56.467+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22m18s833ms).
+2024-04-17T16:09:19.600+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h21m23s134ms).
+2024-04-17T17:31:45.002+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22m25s402ms).
+2024-04-17T18:42:27.518+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h10m42s515ms).
+2024-04-17T20:07:41.045+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25m13s528ms).
+2024-04-17T20:58:47.483+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51m6s438ms).
+2024-04-17T21:23:21.940+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m34s457ms).
+2024-04-17T21:24:31.950+09:00  WARN 10837 --- [SpringPractice] [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][/login] Deprecated unwrapped fragment expression "common/sourceList :: sourceList" found in template /login, line 10, col 7. Please use the complete syntax of fragment expressions instead ("~{common/sourceList :: sourceList}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-04-17T21:24:31.952+09:00  WARN 10837 --- [SpringPractice] [http-nio-8080-exec-4] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-4][/login] Deprecated unwrapped fragment expression "common/messageIcon :: messageIcon" found in template /login, line 11, col 7. Please use the complete syntax of fragment expressions instead ("~{common/messageIcon :: messageIcon}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-04-17T21:53:52.053+09:00  WARN 10837 --- [SpringPractice] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s832ms), soft-evicting connections from pool.
+2024-04-17T22:00:56.303+09:00  WARN 10837 --- [SpringPractice] [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][/login] Deprecated unwrapped fragment expression "common/sourceList :: sourceList" found in template /login, line 10, col 7. Please use the complete syntax of fragment expressions instead ("~{common/sourceList :: sourceList}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-04-17T22:00:56.305+09:00  WARN 10837 --- [SpringPractice] [http-nio-8080-exec-10] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-10][/login] Deprecated unwrapped fragment expression "common/messageIcon :: messageIcon" found in template /login, line 11, col 7. Please use the complete syntax of fragment expressions instead ("~{common/messageIcon :: messageIcon}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2024-04-17T22:02:08.440+09:00  INFO 10837 --- [SpringPractice] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-04-17T22:02:08.456+09:00  INFO 10837 --- [SpringPractice] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-17T22:02:08.459+09:00  INFO 10837 --- [SpringPractice] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-17T22:02:08.461+09:00  INFO 10837 --- [SpringPractice] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-17T22:02:08.554+09:00  INFO 10837 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : Starting SpringPracticeApplication using Java 21.0.1 with PID 10837 (/Applications/Eclipse_2024-03.app/Contents/workspace/SpringPractice/target/classes started by inouekousei in /Applications/Eclipse_2024-03.app/Contents/workspace/SpringPractice)
+2024-04-17T22:02:08.555+09:00  INFO 10837 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-04-17T22:02:08.751+09:00  INFO 10837 --- [SpringPractice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-17T22:02:08.758+09:00  INFO 10837 --- [SpringPractice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 1 JPA repository interface.
+2024-04-17T22:02:08.901+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-17T22:02:08.902+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-17T22:02:08.902+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-17T22:02:08.916+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-17T22:02:08.916+09:00  INFO 10837 --- [SpringPractice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 359 ms
+2024-04-17T22:02:08.955+09:00  INFO 10837 --- [SpringPractice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-04-17T22:02:08.969+09:00  INFO 10837 --- [SpringPractice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5da3cdca
+2024-04-17T22:02:08.970+09:00  INFO 10837 --- [SpringPractice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-04-17T22:02:08.971+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-17T22:02:08.973+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-17T22:02:08.975+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-17T22:02:08.977+09:00  WARN 10837 --- [SpringPractice] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.7.44 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-04-17T22:02:09.011+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-17T22:02:09.011+09:00  INFO 10837 --- [SpringPractice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-17T22:02:09.082+09:00  INFO 10837 --- [SpringPractice] [restartedMain] org.dozer.DozerBeanMapper                : Initializing a new instance of dozer bean mapper.
+2024-04-17T22:02:09.109+09:00  WARN 10837 --- [SpringPractice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-17T22:02:09.193+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@dcb2d8e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4777f4e8, org.springframework.security.web.context.SecurityContextHolderFilter@7a54f101, org.springframework.security.web.header.HeaderWriterFilter@7856ae2e, org.springframework.web.filter.CorsFilter@350a8ba2, org.springframework.security.web.csrf.CsrfFilter@65a9c10, org.springframework.security.web.authentication.logout.LogoutFilter@5d795b5c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@29fd87e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28bc4847, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7260237, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@708dd876, org.springframework.security.web.access.ExceptionTranslationFilter@725020d, org.springframework.security.web.access.intercept.AuthorizationFilter@3ec998dc]
+2024-04-17T22:02:09.269+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-17T22:02:09.283+09:00  INFO 10837 --- [SpringPractice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-17T22:02:09.289+09:00  INFO 10837 --- [SpringPractice] [restartedMain] c.e.demo.SpringPracticeApplication       : Started SpringPracticeApplication in 0.759 seconds (process running for 2929.504)
+2024-04-17T22:02:09.291+09:00  INFO 10837 --- [SpringPractice] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
