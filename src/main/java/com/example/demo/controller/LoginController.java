@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.constant.MessageConst;
-import com.example.demo.constant.UniConst;
+import com.example.demo.constant.UrlConst;
 import com.example.demo.form.LoginForm;
 import com.example.demo.service.LoginService;
 import com.example.demo.util.AppUtil;
@@ -42,20 +42,20 @@ public class LoginController {
 	 * @return　表示画面
 	 */
 
-	@GetMapping(UniConst.LOGIN)
+	@GetMapping(UrlConst.LOGIN)
 	public String view(Model model, LoginForm form) {
 
 		return "/login";
 	}
 
-	@GetMapping(value = UniConst.LOGIN, params = "error")
+	@GetMapping(value = UrlConst.LOGIN, params = "error")
 	public String viewWithError(Model model, LoginForm form) {
 		var errorInfo = (Exception) session.getAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
 		model.addAttribute("errorMsg", errorInfo.getMessage());
 		return "/login";
 	}
 
-	@PostMapping(UniConst.LOGIN)
+	@PostMapping(UrlConst.LOGIN)
 	public String login(Model model, LoginForm form) {
 		var userInfo = service.serchUserById(form.getLoginId());
 		var isCorrectUserAuth = userInfo.isPresent()

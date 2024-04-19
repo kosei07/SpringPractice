@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import com.example.demo.constant.UniConst;
+import com.example.demo.constant.UrlConst;
 
 import lombok.RequiredArgsConstructor;
 
@@ -32,13 +32,13 @@ public class WebSecurityConfig {
 	SecurityFilterChain secutiryFilterChain(HttpSecurity http) throws Exception {
 
 		http.authorizeHttpRequests(
-				authorize -> authorize.requestMatchers(UniConst.NO_AUTHENTICATION).permitAll()
+				authorize -> authorize.requestMatchers(UrlConst.NO_AUTHENTICATION).permitAll()
 						.anyRequest().authenticated())
 				.formLogin(
-						login -> login.loginPage(UniConst.LOGIN)
+						login -> login.loginPage(UrlConst.LOGIN)
 								.usernameParameter(USERNAME_PARAMETER)
-								.defaultSuccessUrl(UniConst.MENU))
-				.logout(logout -> logout.logoutSuccessUrl(UniConst.SIGNUP));
+								.defaultSuccessUrl(UrlConst.MENU))
+				.logout(logout -> logout.logoutSuccessUrl(UrlConst.SIGNUP));
 
 		return http.build();
 	}
