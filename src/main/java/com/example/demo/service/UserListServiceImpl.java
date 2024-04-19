@@ -52,7 +52,6 @@ public class UserListServiceImpl implements UserListService {
 	 * @param form 入力情報
 	 * @return 検索結果
 	 */
-	@Override
 	private List<UserInfo> findUserInfoByParam(UserInfo userInfo) {
 		var loginIdParam = AppUtil.addWildcard(userInfo.getLoginId());
 
